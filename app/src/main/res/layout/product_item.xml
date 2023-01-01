@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="200dp"
+        tools:background="@tools:sample/backgrounds/scenic"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:background="@color/purple_trans">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="start"
+            android:lines="1"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/share_fb"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/full_names" />
+
+
+        <ImageView
+            android:id="@+id/share_fb"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="6dp"
+            android:src="@drawable/ic_share_fb"
+            app:layout_constraintBottom_toBottomOf="@+id/name"
+            app:layout_constraintEnd_toStartOf="@+id/share_insta"
+            app:layout_constraintTop_toTopOf="@+id/name"
+            app:tint="@color/white"/>
+
+        <ImageView
+            android:id="@+id/share_insta"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="6dp"
+            android:src="@drawable/ic_share_insta"
+            app:layout_constraintBottom_toBottomOf="@+id/name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name"
+            app:tint="@color/white"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
